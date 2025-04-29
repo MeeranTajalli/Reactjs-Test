@@ -1,23 +1,30 @@
 # ReactJS Developer Coding Challenge
 
-## Project Setup
+## 🧱 Project Structure
 
-This project consists of a **frontend** and a **backend** application.
+This project consists of two separate apps:
 
-Make sure you have installed:
-
-- Node.js (v14 or later)
-- npm (v6 or later)
-- Git
-- Redis (running locally for backend)
-
-You can use any code editor (e.g., Visual Studio Code).
+- **Frontend** (React)
+- **Backend** (Node.js + Express + Redis)
 
 ---
 
-## How to Run
+## 🛠 Prerequisites
 
-### Backend
+Ensure the following tools are installed on your machine:
+
+- [Node.js](https://nodejs.org/) (v14 or later)
+- [npm](https://www.npmjs.com/) (v6 or later)
+- [Git](https://git-scm.com/)
+- [Redis](https://redis.io/) – running **locally**, preferably on **WSL** (Windows Subsystem for Linux)
+
+You can use any editor like **VS Code** for development.
+
+---
+
+## 🚀 Getting Started
+
+### 1. Start the Backend
 
 ```bash
 cd backend
@@ -25,10 +32,15 @@ npm install
 npm start
 ```
 
-- The backend server will run on `http://localhost:3001`.
-- Make sure Redis is running locally.
+- The backend will run at: `http://localhost:3001`
+- Ensure **Redis is running** locally, preferably via WSL:
+  ```bash
+  redis-server
+  ```
 
-### Frontend
+---
+
+### 2. Start the Frontend
 
 ```bash
 cd frontend
@@ -36,25 +48,27 @@ npm install
 npm start
 ```
 
-- The frontend React app will run on `http://localhost:3000`.
+- The frontend will open at: `http://localhost:3000`
 
 ---
 
-## Features
+## 📦 Features
 
-- Responsive landing page based on provided Figma design.
-- Displays popular cryptocurrencies with live price updates.
-- Data fetched from backend API and updated using WebSockets every 5 seconds.
-
----
-
-## Notes
-
-- Backend API Endpoint: `http://localhost:3001/v1/currencies`
-- WebSocket Endpoint: `ws://localhost:3333/currency`
+- Responsive landing page based on a Figma design.
+- Live cryptocurrency data display.
+- Backend API integration and **WebSocket** support for live price updates (every 5 seconds).
 
 ---
 
-# 🚀 You're done!
+## 🔗 API Endpoints
 
-Just open `http://localhost:3000` in your browser to view the landing page.
+- **REST API**: `http://localhost:3001/v1/currencies`
+- **WebSocket**: `ws://localhost:3333/currency`
+
+---
+
+## ✅ All Set!
+
+Open your browser at [`http://localhost:3000`](http://localhost:3000) and enjoy the app!
+
+---
