@@ -25,7 +25,7 @@ npm start
 - WebSocket server will start at `ws://localhost:3333/currency`
 - Make sure Redis is running before starting the backend:
   ```bash
-  redis-server
+  sudo service redis-server start
   ```
 
 ---
