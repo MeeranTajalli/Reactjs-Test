@@ -1,0 +1,1207 @@
+/* ────────────── Global ────────────── */
+body {
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* ────────────── Navbar ────────────── */
+.custom-navbar {
+  background-color: #132b50;
+  padding: 0.1rem 2rem;
+}
+
+.logo-image {
+  height: 60px;
+  margin-left: -3rem;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;        /* nicely spaces the action items */
+  margin-left: auto;  /* pushes actions to the far right */
+}
+
+.navbar-nav .nav-link {
+  margin: 0 1rem;
+  color: #fff !important;
+  font-weight: 500;
+}
+
+.navbar-nav .nav-link {
+  margin: 0 2rem;  /* reduces spacing between Market/Trade/Dashboard */
+  font-weight: 300;
+  font-size: 1.1rem;
+}
+
+.custom-navbar {
+  padding: 0.5rem 2rem;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #00f0ff !important;
+}
+
+.navbar-actions .nav-action-link {
+  font-weight: 600;
+  color: white;
+}
+
+.bell-icon {
+  margin-right: 1rem;
+  color: #fff;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  margin-right: -3rem;
+}
+
+/* ───────────── Hero Section ───────────── */
+.hero-section {
+  padding-right: 0; /* remove container gutter on the right */
+}
+
+/* Title */
+.hero-title {
+  margin: 80px 0 90px 90px;
+  font-size: 3.7rem;
+  font-weight: 900;
+  line-height: 1.3;
+  color: #172A4F;
+}
+
+/* Shared button rules for both hero and “Get Started” below */
+.hero-buttons .btn,
+.join-button {
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 100px;
+  padding: 0.75rem 1.75rem;
+  margin-right: 1rem;
+  margin-left: 6rem;
+  font-family: inherit;
+}
+
+/* in your CSS file (e.g. Hero.css & ExchangeStats.css) */
+
+.hero-buttons,
+.button-wrapper {
+  margin-bottom: 250px;
+  gap: -150px;  /* or whatever spacing you like */
+}
+
+/* Gradient “primary” button */
+.hero-buttons .btn-primary,
+.join-button {
+  background: linear-gradient(90deg, #00FAFD 0%, #00FEB9 100%);
+  border: none;
+  color: #001131;
+}
+
+.hero-buttons .btn-primary:hover,
+.join-button:hover {
+  background-color: #00C7BC;
+  opacity: 0.9;
+}
+
+/* Outline dark button */
+.hero-buttons .btn-outline-dark {
+  border: 2px solid #555353;
+  color: #001131;
+  font-weight: 300;
+}
+
+.hero-buttons .btn-outline-dark:hover {
+  background-color: #07D4F8;
+  color: #fff;
+}
+
+/* Image wrapper */
+.hero-img-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  overflow: hidden;
+  margin-left: auto;
+}
+
+.hero-img {
+  margin-top: 0;
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  transform: none;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .hero-title {
+    margin: 0 0 2rem;
+    font-size: 2.2rem;
+    text-align: center;
+  }
+  .hero-buttons {
+    justify-content: center;
+    margin-left: 0;
+  }
+  .hero-img-wrapper {
+    justify-content: center;
+  }
+}
+
+
+/* Alert.css */
+
+.custom-alert {
+  position: absolute;
+  top: 140px;
+  right: 20px;
+  background-color: #fff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 9px;
+  color: #1B2A41;
+  font-weight: 600;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 400px;
+  box-shadow:
+  0 8px 30px rgba(0, 0, 0, 0.25),
+  inset 0 -4px 0 #28a745;
+}
+
+.custom-alert .alert-text {
+  font-size: 1.5rem;
+  color: #1B2A41;
+}
+
+.custom-alert .btn-close {
+  font-size: 1rem;
+  opacity: 0.6;
+}
+
+.custom-alert .btn-close:hover {
+  opacity: 1;
+}
+
+
+/* CryptoTable.css */
+
+/* Container & title */
+.crypto-container {
+  margin-top: 3rem;
+}
+
+.crypto-title {
+  color: #001131;
+  font-size: 3rem;
+  margin-top: -130px;
+  margin-bottom: 70px;
+  margin-left: 70px;
+  font-weight: 700;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* Loading text */
+.loading-text {
+  text-align: center;
+  margin-top: 5rem;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* Table base */
+.crypto-table {
+  margin-left: 5rem;
+  width: 1100px;
+}
+
+/* Header */
+.crypto-table thead th {
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 4px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 560;
+  color: #172A4FB0;
+  font-size: 0.95rem;
+  padding: 0.5rem;
+}
+
+/* Body cells */
+.crypto-table td {
+  border: none;
+  padding: 0.5rem;
+  font-size: 0.96rem;
+  font-family: 'DM Sans', sans-serif;
+  color: #001131;
+  font-weight: 400;
+  vertical-align: middle;
+}
+
+/* Coin cell (image + names) */
+.coin-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.coin-image {
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+}
+
+.coin-names {
+  display: flex;
+  flex-direction: column;
+}
+
+.coin-name {
+  font-weight: 600;
+}
+
+.coin-symbol {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #6c757d; /* matches .text-muted */
+}
+
+/* Price cell */
+.coin-price {
+  white-space: nowrap;
+}
+
+/* 24h change */
+.price-change {
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.price-change.positive {
+  color: #28a745;
+}
+
+.price-change.negative {
+  color: #dc3545;
+}
+
+/* Market cap */
+.coin-marketcap {
+  white-space: nowrap;
+}
+
+/* Row hover */
+.crypto-table tbody tr {
+  transition: background-color 0.2s;
+}
+
+.crypto-table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+/* Fade In/Out Animation for table rows */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(-10px); }
+}
+
+.fade-row {
+  animation: fadeIn 0.5s ease;
+}
+
+/* Flashing text for price updates */
+@keyframes textFlashGreen {
+  0% { color: #34d399; }
+  100% { color: inherit; }
+}
+
+@keyframes textFlashRed {
+  0% { color: #f87171; }
+  100% { color: inherit; }
+}
+
+.flash-green {
+  animation: textFlashGreen 0.8s ease;
+}
+
+.flash-red {
+  animation: textFlashRed 0.8s ease;
+}
+
+
+
+/* BuildPortfolio.css */
+
+/* ─── Global for this section ─── */
+.build-portfolio {
+  font-family: 'DM Sans', sans-serif;
+  color: #001131;
+}
+
+/* ─── Section Heading ─── */
+.build-portfolio .portfolio-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-top: 150px;
+  margin-bottom: 0.5rem;
+  margin-left: -30px;
+}
+
+.build-portfolio .portfolio-desc {
+  font-weight: 700;
+  margin-left: 30px;
+}
+
+/* ─── Steps Container ─── */
+.steps-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0 40px;
+}
+
+/* ─── Each Step ─── */
+.step {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Number + Text */
+.step-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  max-width: 65%;
+}
+
+.step-number {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 3.5rem;
+}
+
+.step-content h2 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.step-content p {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 50px;
+}
+
+/* Image */
+.step-image img {
+  width: 220px;
+  height: auto;
+  margin-top: -50px;   /* keep the vertical “lift” */
+}
+
+/* Offset the middle (2nd) image */
+.step:nth-of-type(2) .step-image img {
+  margin-right: -130px;
+}
+
+/* ─── Call-to-Action Button ─── */
+.button-wrapper {
+  margin-left: 120px;
+}
+
+.join-button {
+  font-family: inherit;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 100px;
+  padding: 0.75rem 1.75rem;
+  background: linear-gradient(90deg, #00FAFD 0%, #00FEB9 100%);
+  border: none;
+  color: #001131;
+}
+
+.join-button:hover {
+  background-color: #00C7BC;
+  opacity: 0.9;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 768px) {
+  .step {
+    flex-direction: column;
+  }
+  .step-image {
+    margin-top: 1rem;
+  }
+  .button-wrapper {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+/* Stats styling */
+
+.exchange-title {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  font-size: 2.6rem;
+  line-height: 1.4;
+  color: #172A4F;
+  text-align: left;
+  letter-spacing: -0.2px;
+}
+
+.stats-container {
+  display: flex;
+  gap: 5rem;        /* tighten horizontal spacing */
+  flex-wrap: wrap;/* wrap on small screens */
+
+}
+
+.stats-item {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-bottom: 100px;
+}
+
+.stats-number {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  font-size: 4.5rem;
+  line-height: 1.1;
+  color: #172A4F;
+  letter-spacing: 0.5px;
+  text-align: left;
+}
+
+
+.stats-container, .stats-number, .stats-label {
+  font-family: 'DM Sans', sans-serif;
+}
+
+.stats-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 2.2rem;
+  color: #172A4F;
+  font-weight: 300;
+  line-height: 1.5;
+  text-align: left;
+  margin-top: 0.3rem;
+}
+
+
+
+/* responsive tweak */
+@media (max-width: 576px) {
+  .stats-container {
+    gap: 1.5rem;
+  }
+  .stats-number {
+    font-size: 2rem;
+  }
+}
+
+/* Help.css */
+
+/* Section wrapper */
+.help-section {
+  margin: 3rem auto 2rem;
+  text-align: left;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* “Need Help?” heading */
+.help-title {
+  color: #172A4F;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  font-size: 2.5rem;
+}
+
+/* Help icons row */
+.help-icons {
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* Each icon + text */
+.help-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  column-gap: 10000px;
+}
+
+.help-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  /* old: gap: 3rem; */
+  gap: 3rem 15rem;    /* 3rem row-gap, 6rem column-gap */
+}
+/* Circle background */
+.help-circle {
+  width: 120px;
+  height: 120px;
+  background-color: #e0e0e0;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Icon image */
+.help-img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+}
+
+/* Title under icon */
+.help-item-title {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  color: #001131;
+}
+
+/* Descriptor text */
+.help-item-text {
+  font-size: 1.1rem;
+  color: #6c757d;
+  text-align: center;
+}
+
+/* Start earning section */
+.earn-title {
+  color: #000;
+  font-weight: 700;
+  margin: 7rem 0 1rem;
+  font-size: 2.5rem;
+}
+
+/* CTA wrapper */
+.cta-wrapper {
+  margin-bottom: 0rem;
+  margin-left: -6rem;
+}
+
+/* Gradient Join button */
+.join-button {
+  font-weight: 600;
+  padding: 0.6rem 1.8rem;
+  border-radius: 50px;
+  background: linear-gradient(90deg, #00FAFD 0%, #00FEB9 100%);
+  border: none;
+  color: #fff;
+}
+
+.join-button:hover {
+  background-color: #00C7BC;
+  opacity: 0.9;
+}
+
+/* Responsive: center text on small screens */
+@media (max-width: 768px) {
+  .help-section {
+    text-align: center;
+  }
+}
+
+/* Footer.css */
+
+/* 1) Reuse your navbar’s dark background */
+.primary-dark-bg {
+  background-color: #132b50;
+}
+
+/* 2) Base text color & font */
+.text-white,
+.footer-text,
+.footer-link {
+  color: #ffffff;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+}
+
+/* 3) Footer container tweaks for mobile */
+.footer-container {
+  gap: 0.75rem;
+}
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* 4) Footer links styling & spacing */
+.footer-links {
+  gap: 1rem;
+}
+.footer-link {
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+.footer-link:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+/* ────────────── Breakpoint: Large devices (≤992px) ────────────── */
+@media (max-width: 992px) {
+  /* Hero: stack image under text */
+  .hero-section {
+    flex-direction: column !important;
+    text-align: center;
+  }
+  .hero-title {
+    margin-left: 0;
+  }
+  .hero-img-wrapper {
+    margin: 2rem auto 0;
+  }
+
+  /* Portfolio steps: make all step-images center */
+  .steps-container .step {
+    flex-direction: column;
+    align-items: center;
+  }
+  .step-image img {
+    margin-left: 0 !important;
+  }
+  .button-wrapper {
+    margin-left: 0 !important;
+    text-align: center;
+  }
+
+  /* ExchangeStats: reduce gap and wrap items */
+  .stats-container {
+    gap: 3rem !important;
+    flex-wrap: wrap;
+  }
+
+  /* Help icons: shrink circle & gap */
+  .help-icons {
+    gap: 2rem !important;
+  }
+  .help-circle {
+    width: 100px;
+    height: 100px;
+  }
+
+  /* Footer: stack elements */
+  .footer-container {
+    flex-direction: column !important;
+    gap: 1rem;
+    text-align: center;
+  }
+}
+
+/* ────────────── Breakpoint: Medium devices (≤768px) ────────────── */
+@media (max-width: 768px) {
+  /* Navbar: ensure brand & toggler only */
+  .navbar-nav {
+    display: none; /* hide full menu */
+  }
+
+  /* Tables: enable horizontal scroll */
+  .table-responsive {
+    overflow-x: auto;
+  }
+
+  /* Hero & Portfolio: font size tweaks */
+  .hero-title { font-size: 2rem !important; }
+  .portfolio-title,
+  .earn-title {
+    font-size: 2rem !important;
+  }
+
+  /* Exchange title */
+  .exchange-title { font-size: 2rem !important; }
+
+  /* CryptoTable: cell padding */
+  .crypto-table th,
+  .crypto-table td {
+    padding: 0.5rem !important;
+  }
+}
+
+/* ────────────── Breakpoint: Small devices (≤576px) ────────────── */
+@media (max-width: 576px) {
+  /* Reduce help icon size & text */
+  .help-circle {
+    width: 80px;
+    height: 80px;
+  }
+  .help-item-title { font-size: 1rem !important; }
+  .help-item-text { font-size: 0.8rem !important; }
+
+  /* Shrink stats numbers */
+  .stats-number { font-size: 2rem !important; }
+
+  /* Portfolio headings */
+  .portfolio-title,
+  .earn-title {
+    font-size: 1.75rem !important;
+  }
+}
+
+/* ────────────── Extra‐Small Devices ────────────── */
+@media (max-width: 480px) {
+  /* Hero Section */
+  .hero-title {
+    font-size: 1.6rem;         /* down from ~3.7rem */
+    margin: 1rem 0 1.5rem;     /* tighter top/bottom */
+    text-align: center;
+  }
+  .hero-buttons .btn {
+    padding: 0.5rem 1rem;      /* smaller buttons */
+    font-size: 0.9rem;
+    margin: 0.5rem 0;          /* vertical spacing */
+  }
+  .hero-img {
+    max-width: 80%;            /* don’t let it overwhelm */
+    margin-top: -45px;           /* center it */
+    transform: none;
+  }
+  .crypto-title {
+    font-size: 1.5rem;      /* smaller title */
+    margin: 1rem 0;
+    text-align: center;
+  }
+
+  /* add some side padding so the table isn’t flush to the edges */
+  .crypto-container {
+    padding: 0 1rem;
+  }
+
+  /* tighten up cell padding and font-size */
+  .crypto-table thead th,
+  .crypto-table td {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  /* make sure the responsive wrapper still scrolls */
+  .table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Portfolio Section */
+  .portfolio-title,
+  .earn-title {
+    font-size: 1.5rem;         /* down from ~2.5rem */
+    margin: 1rem 0;
+    text-align: center;
+  }
+  .step-number {
+    font-size: 2rem;           /* down from 3.5rem */
+  }
+  .step-content h2 {
+    font-size: 1.2rem;
+  }
+  .step-content p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  .step-image img {
+    width: 150px;              /* smaller illustrations */
+    margin: 0 auto;            /* center under text */
+  }
+  .button-wrapper {
+    margin: 1.5rem 0;          /* tighter CTA spacing */
+    text-align: center;
+  }
+
+  /* ExchangeStats */
+  .exchange-title {
+    font-size: 1.6rem;
+    margin: 1rem 0;
+    text-align: center;
+  }
+  .stats-container {
+    gap: 2rem;                 /* smaller gaps */
+    justify-content: space-around;
+  }
+  .stats-number {
+    font-size: 1.5rem;
+  }
+  .stats-label {
+    font-size: 0.9rem;
+  }
+
+  /* Help Section */
+  .help-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  .help-circle {
+    width: 80px;
+    height: 80px;
+  }
+  .help-img {
+    width: 50%;
+    height: 50%;
+  }
+  .help-item-title {
+    font-size: 1rem;
+  }
+  .help-item-text {
+    font-size: 0.8rem;
+  }
+
+  /* Footer */
+  .footer-text,
+  .footer-link {
+    font-size: 0.8rem;
+  }
+  .footer-container {
+    gap: 0.5rem;
+    text-align: center;
+  }
+}
+
+/*────────────── Final Mobile & Dynamic Responsiveness Fix ─────────────*/
+
+/* Overall padding control for mobile */
+@media (max-width: 768px) {
+  body {
+    padding: 0 1rem;
+  }
+}
+
+/* Fix hero section (title + buttons + image) */
+@media (max-width: 768px) {
+  .hero-section {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 2rem 0rem;
+  }
+  .hero-title {
+    font-size: 2.2rem;
+    margin: 1rem 0;
+  }
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    margin: 1.5rem 0;
+  }
+  .hero-buttons .btn {
+    margin: 0.5rem 0;
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+  }
+  .hero-img-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+  }
+  .hero-img {
+    width: 90%;
+    max-width: 300px;
+    height: auto;
+  }
+}
+
+/* Crypto Table: Make it smaller and fit without scroll */
+@media (max-width: 768px) {
+  .crypto-container {
+    margin-top: 1rem;
+    padding: 0;
+    margin-left: 0.5rem;
+    overflow-x: auto; /* just in case */
+  }
+  .crypto-table {
+    width: 100%;
+    min-width: 100%;
+    margin-left: -1rem;/* force it to fit screen width */
+  }
+  .crypto-table thead th,
+  .crypto-table td {
+    font-size: 0.7rem;
+    padding: 0rem;
+    text-align: center;
+  }
+}
+
+/* Portfolio Section */
+@media (max-width: 768px) {
+  .build-portfolio {
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  .portfolio-title {
+    margin: 1.5rem 0;
+    font-size: 2rem;
+  }
+  .portfolio-desc {
+    margin: 0 auto 2rem;
+  }
+  .steps-container {
+    padding: 0;
+  }
+  .step {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .step-left {
+    max-width: 100%;
+    justify-content: center;
+  }
+  .step-content p {
+    font-size: 1rem;
+    margin: 1rem 0;
+  }
+  .step-image img {
+    width: 180px;
+    margin: 1rem auto 0;
+  }
+
+  /* FIX: Center the second image same as others */
+  .step:nth-of-type(2) .step-image img {
+    margin: 1rem auto 0 !important;
+  }
+
+  .button-wrapper {
+    text-align: center;
+    margin: 2rem 0;
+  }
+}
+
+/* Exchange Stats Section */
+@media (max-width: 768px) {
+  .stats-container {
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+  .stats-item {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .stats-number {
+    font-size: 2.5rem;
+  }
+  .stats-label {
+    font-size: 1.1rem;
+  }
+}
+
+/* Help Section */
+@media (max-width: 768px) {
+  .help-section {
+    padding: 1rem;
+    text-align: center;
+  }
+  .help-icons {
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+  .help-item {
+    max-width: 120px;
+  }
+  .help-circle {
+    width: 90px;
+    height: 90px;
+  }
+  .help-img {
+    width: 50%;
+  }
+  .help-item-title {
+    font-size: 1rem;
+  }
+  .help-item-text {
+    font-size: 0.8rem;
+  }
+}
+
+/* Footer final polish */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-link {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/*────────────── New Final Touches ─────────────*/
+
+/* 1. Reduce margin after Crypto Table */
+.crypto-container {
+  margin-bottom: -8rem;
+   /* tighter bottom spacing */
+}
+
+/* 2. Smaller + right-aligned Alert Notification */
+@media (max-width: 768px){
+  
+
+.custom-alert {
+  top: 60px; /* higher up */
+  right: 10px;
+  max-width: 150px; /* smaller width */
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), inset 0 -3px 0 #28a745;
+}
+.custom-alert .alert-text {
+  font-size: 0.7rem; /* smaller text */
+}
+.custom-alert .btn-close {
+  font-size: 0.8rem;
+}
+}
+/* 3. Hamburger menu to the right side of Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar-toggler {
+  margin-left: auto; /* push hamburger to extreme right */
+}
+
+/*────────────── Fix for Medium Devices (Tablets, small laptops) ─────────────*/
+
+@media (max-width: 992px) {
+  /* Hero section: stack text and image */
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  .hero-title {
+    font-size: 3rem; /* smaller but still bold */
+    margin: 1rem 0;
+  }
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    margin: 1.5rem 0;
+  }
+  .hero-buttons .btn {
+    margin: 0.5rem 0;
+    padding: 0.7rem 1.7rem;
+    font-size: 1.1rem;
+  }
+  .hero-img-wrapper {
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  .hero-img {
+    width: 80%;
+    max-width: 400px;
+    height: auto;
+  }
+
+  /* Crypto Table: shrink slightly for medium screens */
+  .crypto-container {
+    padding: 0 1rem;
+  }
+  .crypto-table {
+    width: 100%;
+    min-width: 100%;
+    margin: 0 auto;
+  }
+  .crypto-table thead th,
+  .crypto-table td {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+
+  /* Portfolio Section: center everything */
+  .build-portfolio {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  .portfolio-title {
+    font-size: 2.5rem;
+    margin: 2rem 0 1rem;
+  }
+  .portfolio-desc {
+    font-size: 1.1rem;
+  }
+  .step {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  .step-image img {
+    width: 220px;
+    margin: 1rem auto 0;
+  }
+  .step-content h2 {
+    font-size: 1.5rem;
+  }
+  .step-content p {
+    font-size: 1.1rem;
+  }
+
+  /* Stats Section */
+  .stats-container {
+    gap: 3rem;
+    justify-content: center;
+  }
+  .stats-number {
+    font-size: 2.8rem;
+  }
+  .stats-label {
+    font-size: 1.3rem;
+  }
+
+  /* Help Section */
+  .help-section {
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  .help-icons {
+    gap: 2rem;
+  }
+}
+
+/*────────────── End Fix for Medium Screens ─────────────*/
+
+/* Tablet screens: 2 stats per row */
+@media (max-width: 992px) {
+  .stats-container {
+    justify-content: center;
+    gap: 3rem 5rem; /* row-gap, column-gap */
+  }
+  .stats-item {
+    flex: 1 1 45%; /* two items per row */
+    max-width: 45%;
+  }
+}
+
+/* Mobile screens: 1 stat per row */
+@media (max-width: 768px) {
+  .stats-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .stats-item {
+    max-width: 100%;
+  }
+}
