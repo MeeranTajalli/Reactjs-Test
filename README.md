@@ -1,30 +1,19 @@
-# ReactJS Developer Coding Challenge
-
-## 🧱 Project Structure
-
-This project consists of two separate apps:
-
-- **Frontend** (React)
-- **Backend** (Node.js + Express + Redis)
-
----
+# ReactJS Developer Coding Challenge – Solution
 
 ## 🛠 Prerequisites
 
-Ensure the following tools are installed on your machine:
+Make sure the following are installed:
 
-- [Node.js](https://nodejs.org/) (v14 or later)
-- [npm](https://www.npmjs.com/) (v6 or later)
-- [Git](https://git-scm.com/)
-- [Redis](https://redis.io/) – running **locally**, preferably on **WSL** (Windows Subsystem for Linux)
-
-You can use any editor like **VS Code** for development.
+- Node.js (v14 or later)
+- npm (v6 or later)
+- Git
+- Redis (running locally, preferably through WSL if on Windows)
 
 ---
 
-## 🚀 Getting Started
+## 🚀 How to Run
 
-### 1. Start the Backend
+### Backend
 
 ```bash
 cd backend
@@ -32,15 +21,16 @@ npm install
 npm start
 ```
 
-- The backend will run at: `http://localhost:3001`
-- Ensure **Redis is running** locally, preferably via WSL:
+- Backend server will start at `http://localhost:3001`
+- WebSocket server will start at `ws://localhost:3333/currency`
+- Make sure Redis is running before starting the backend:
   ```bash
   redis-server
   ```
 
 ---
 
-### 2. Start the Frontend
+### Frontend
 
 ```bash
 cd frontend
@@ -48,27 +38,17 @@ npm install
 npm start
 ```
 
-- The frontend will open at: `http://localhost:3000`
-
----
-
-## 📦 Features
-
-- Responsive landing page based on a Figma design.
-- Live cryptocurrency data display.
-- Backend API integration and **WebSocket** support for live price updates (every 5 seconds).
+- Frontend app will open at `http://localhost:3000`
 
 ---
 
 ## 🔗 API Endpoints
 
-- **REST API**: `http://localhost:3001/v1/currencies`
-- **WebSocket**: `ws://localhost:3333/currency`
+- REST API: `http://localhost:3001/v1/currencies`
+- WebSocket: `ws://localhost:3333/currency`
 
 ---
 
-## ✅ All Set!
+## ✅ Project Ready
 
-Open your browser at [`http://localhost:3000`](http://localhost:3000) and enjoy the app!
-
----
+Open [`http://localhost:3000`](http://localhost:3000) to view the app.
